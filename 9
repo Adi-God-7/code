@@ -1,0 +1,16 @@
+
+
+echo "Fetching currently connected users..."
+echo "------------------------------------"
+
+# Extracting unique usernames
+user_list=$(who | cut -d' ' -f1 | sort -u)
+
+echo "Connected Users:"
+echo "$user_list"
+
+# Counting the unique users
+user_count=$(echo "$user_list" | wc -l)
+
+echo "------------------------------------"
+echo "Total number of connected users: $user_count"
