@@ -1,0 +1,16 @@
+
+
+echo "Displaying files created or modified in the month of November:"
+echo "------------------------------------------------------------"
+
+# Listing files and filtering for the keyword 'Nov'
+# We use -i to ignore case just in case
+list=$(ls -l | grep -i "Nov")
+
+if [ -z "$list" ]; then
+    echo "No files found for the month of November."
+else
+    echo "$list"
+fi
+
+echo "------------------------------------------------------------"
