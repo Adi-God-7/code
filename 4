@@ -1,0 +1,4 @@
+
+read -p "Str: " s
+r=$(echo $s | rev)
+[ "$s" == "$r" ] && echo "Palindrome" || echo "Not"
