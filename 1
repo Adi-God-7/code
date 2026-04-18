@@ -1,0 +1,23 @@
+
+echo "--- Calculator ---"
+echo "1. Add"
+echo "2. Subtract"
+echo "3. Multiply"
+echo "4. Divide"
+read -p "Enter Choice (1-4): " c
+
+read -p "Num 1: " a
+read -p "Num 2: " b
+
+case $c in
+  1) echo "Result: $((a+b))" ;;
+  2) echo "Result: $((a-b))" ;;
+  3) echo "Result: $((a*b))" ;;
+  4) 
+     if [ $b -eq 0 ]; then
+       echo "Error: Div by 0"
+     else
+       echo "Result: $((a/b))"
+     fi ;;
+  *) echo "Invalid choice!" ;;
+esac
