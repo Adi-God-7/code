@@ -1,0 +1,11 @@
+
+
+option=$1
+
+if [ "$option" == "la" ]; then
+    echo "Listing all files sorted by modification time (newest first):"
+    ls -lt
+else
+    echo "Showing default directory listing:"
+    ls
+fi
