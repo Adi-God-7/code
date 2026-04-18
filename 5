@@ -1,0 +1,5 @@
+
+read -p "Sentence: " s
+v=$(echo $s | grep -io '[aeiou]' | wc -l)
+c=$(echo $s | grep -io '[b-df-hj-np-tv-z]' | wc -l)
+echo "Vowels: $v, Consonants: $c"
