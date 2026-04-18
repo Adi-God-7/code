@@ -1,0 +1,6 @@
+
+read -p "Num: " n
+for((i=2;i*i<=n;i++)); do
+  if [ $((n%i)) -eq 0 ]; then echo "Not Prime"; exit; fi
+done
+echo "Prime"
