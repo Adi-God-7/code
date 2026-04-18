@@ -1,0 +1,10 @@
+
+echo "Searching for files created or modified in the last 14 days..."
+echo "------------------------------------------------------------"
+
+# -maxdepth 1 looks only in current dir, not subfolders
+# -mtime -14 looks for modified time less than 14 days
+find . -maxdepth 1 -mtime -14 -type f -print
+
+echo "------------------------------------------------------------"
+echo "Search complete."
