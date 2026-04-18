@@ -1,0 +1,18 @@
+
+
+echo "Scanning for files with Read, Write, and Execute permissions..."
+echo "------------------------------------------------------------"
+
+found=0
+
+for item in *; do
+    # Check if it's a file and has r, w, and x permissions
+    if [ -f "$item" ] && [ -r "$item" ] && [ -w "$item" ] && [ -x "$item" ]; then
+        echo "[Permitted] : $item"
+        found=$((found + 1))
+    fi
+done
+
+if [ $found -eq 0 ]; then
+    echo "No files found with full permissions."
+fi
